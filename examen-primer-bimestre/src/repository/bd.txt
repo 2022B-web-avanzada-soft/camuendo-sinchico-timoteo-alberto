@@ -1,1 +1,1 @@
-{"nombre":"asdf","numeroPartidosJugados":null,"fechaCreacion":null,"profesional":false,"jugadores":[]}
+{"nombre":"Los lobos","numeroPartidosJugados":null,"fechaCreacion":1355270400000,"profesional":true,"jugadores":[]}

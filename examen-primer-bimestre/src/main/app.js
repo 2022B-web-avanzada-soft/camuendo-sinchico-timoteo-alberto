@@ -9,11 +9,8 @@ function main() {
 
     equipoBasket.crear().then(
         equipoBasket => {
-            console.log(equipoBasket)
             fileManager.escribir(path, equipoBasket).then(
-                json => {
-                    console.log(json)
-                }
+                res => {console.log(res)}
             )
         }
     )
