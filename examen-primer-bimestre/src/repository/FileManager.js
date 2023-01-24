@@ -20,7 +20,7 @@ export class FileManager {
                         if( contenidoArchivo === ''){
                             resolve('')
                         }
-                        resolve(contenidoArchivo)
+                        resolve(JSON.parse(contenidoArchivo))
                     }
                 );
             }
@@ -32,7 +32,7 @@ export class FileManager {
             (resolve, reject) => {
                 fs.writeFile(
                     path,
-                    JSON.stringify(contenido.toString()),
+                    JSON.stringify(contenido),
                     (errorEscritura) => {
                         if (errorEscritura) {
                             reject('Error escribiendo archivo');
