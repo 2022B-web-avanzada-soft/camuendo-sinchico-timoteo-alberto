@@ -1,1 +1,1 @@
-{"nombre":"los lobos","numeroPartidosJugados":25,"fechaCreacion":1355270400000,"profesional":true,"jugadores":[{"nombre":"timoteo","altura":1.64,"peso":85,"fechaNacimiento":1355270400000,"lesionado":false},{"nombre":"alberto","altura":1.89,"peso":56,"fechaNacimiento":1355270400000,"lesionado":true}]}
+""

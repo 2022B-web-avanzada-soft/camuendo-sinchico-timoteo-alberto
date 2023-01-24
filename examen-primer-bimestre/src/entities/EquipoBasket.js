@@ -42,36 +42,7 @@ export class EquipoBasket {
 
     async editar() {
 
-        let nombre
-        const equipos = [];
-
-        await fileManager.leer(path).then(
-            contenido => {
-                let equipo = contenido
-                equipos.push(equipo)
-            })
-
-        const nombresEquipos = [];
-        equipos.forEach(equipo => {nombresEquipos.push(equipo.nombre)})
-
-
         let equipoBasketEditado = new EquipoBasket()
-
-        try {
-            nombre = await inquirer
-                .prompt([
-                    {
-                        type: 'rawlist',
-                        name: 'equipo',
-                        message: 'Que equipo desea editar: ',
-                        choices: nombresEquipos
-                    }
-                ]).then()
-            console.log('Seleccionaste a: ' + nombre.equipo)
-
-        } catch (e) {
-            console.log(e)
-        }
 
         try {
             await inquirer.prompt([

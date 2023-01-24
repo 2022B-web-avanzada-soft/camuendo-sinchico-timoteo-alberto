@@ -69,6 +69,35 @@ async function menu() {
 
             //editar
             if (opcion.opcion === opcionesMenu[2]) {
+
+                let nombre
+                const equipos = [];
+                await fileManager.leer(path).then(
+                    contenido => {
+                        let equipo = contenido
+                        equipos.push(equipo)
+                    })
+                const nombresEquipos = [];
+                equipos.forEach(equipo => {
+                    nombresEquipos.push(equipo.nombre)
+                })
+                let equipoBasketEditado = new EquipoBasket()
+                try {
+                    nombre = await inquirer
+                        .prompt([
+                            {
+                                type: 'rawlist',
+                                name: 'equipo',
+                                message: 'Que equipo desea editar: ',
+                                choices: nombresEquipos
+                            }
+                        ]).then()
+                    console.log('Seleccionaste a: ' + nombre.equipo)
+
+                } catch (e) {
+                    console.log(e)
+                }
+
                 let respuesta = await inquirer.prompt([{
                     type: "rawlist",
                     name: "opcion",
@@ -77,7 +106,6 @@ async function menu() {
                 }]).then()
 
                 if (respuesta.opcion === 'Editar el equipo') {
-
                     let equipo;
                     const jugadores = [];
                     await fileManager.leer(path).then(
@@ -95,7 +123,6 @@ async function menu() {
                     console.log('Equipo editado correctamente')
 
                 }
-
                 if (respuesta.opcion === 'Agregar un jugador') {
                     let equipo;
                     const jugadores = [];
@@ -133,7 +160,7 @@ async function menu() {
                     equipo.jugadores = jugadoresEdit;
                     await fileManager.escribir(path, equipo).then()
                     await fileManager.leer(path)
-                    console.log('Jugador eliminado correctamente')
+                    console.log('Jugador editado correctamente')
                 }
 
                 if (respuesta.opcion === 'Eliminar un jugador') {
@@ -156,6 +183,7 @@ async function menu() {
                     await fileManager.leer(path)
                     console.log('Jugador eliminado correctamente')
                 }
+
 
             }
 
