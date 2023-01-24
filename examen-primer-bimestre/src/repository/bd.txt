@@ -1,1 +1,1 @@
-{"nombre":"Los lobos","numeroPartidosJugados":null,"fechaCreacion":1355270400000,"profesional":true,"jugadores":[]}
+"[object Object],[object Object]"

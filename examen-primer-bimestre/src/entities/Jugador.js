@@ -1,4 +1,5 @@
-import { createRequire } from 'module';
+import {createRequire} from 'module';
+
 const require = createRequire(import.meta.url);
 const inquirer = require('inquirer');
 
@@ -10,6 +11,7 @@ export class Jugador {
         this.fechaNacimiento = fechaNacimiento;
         this.lesionado = lesionado;
     }
+
     async crear() {
         const jugador = new Jugador()
         try {
@@ -21,18 +23,18 @@ export class Jugador {
                     {type: "input", name: 'fechaNacimiento', message: 'Ingresa la fecha de nacimiento del jugador: '},
                     {type: 'input', name: 'lesionado', message: 'El juador esta lesionado?: Si o No'}
                 ]).then(datos => {
-                    const jugadorP = new Promise(resolve => (
+                    return new Promise(resolve => (
                         jugador.nombre = datos.nombre,
-                            jugador.altura = datos.altura,
-                            jugador.peso = datos.peso,
-                            jugador.fechaNacimiento = datos.fechaNacimiento,
-                            jugador.lesionado = datos.lesionado,
+                            jugador.altura = parseFloat(datos.altura),
+                            jugador.peso = parseFloat(datos.peso),
+                            jugador.fechaNacimiento = Date.parse(datos.fechaNacimiento),
+                            jugador.lesionado = (datos.lesionado === 'Si'),
                             resolve(jugador)
                     ));
-                    return jugadorP;
                 });
         } catch (e) {
             console.log(e)
         }
+        return jugador;
     }
 }

@@ -2,7 +2,7 @@ import {createRequire} from 'module';
 
 const require = createRequire(import.meta.url);
 const fs = require('fs');
-
+const equipos = []
 export class FileManager {
 
     async leer(path) {
@@ -17,6 +17,9 @@ export class FileManager {
                         if (errorEnLectura) {
                             reject('Error leyendo archivo');
                         }
+                        if( contenidoArchivo === ''){
+                            resolve('')
+                        }
                         resolve(contenidoArchivo)
                     }
                 );
@@ -29,7 +32,7 @@ export class FileManager {
             (resolve, reject) => {
                 fs.writeFile(
                     path,
-                    JSON.stringify(contenido),
+                    JSON.stringify(contenido.toString()),
                     (errorEscritura) => {
                         if (errorEscritura) {
                             reject('Error escribiendo archivo');
