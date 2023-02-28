@@ -172,6 +172,7 @@ async function menu() {
                             equipo.jugadores.forEach(jugador => {
                                 jugadores.push(jugador)
                             })
+
                         }
                     )
                     let nombre = await jugador.eliminar().then()
