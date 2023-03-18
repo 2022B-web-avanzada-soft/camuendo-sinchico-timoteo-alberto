@@ -20,10 +20,10 @@ export class EquipoBasket {
         try {
             await inquirer
                 .prompt([
-                    {type: 'input', name: 'nombre', message: 'Ingresa el nombre del equipo: '},
+                    {type: 'input', name: 'nombre', message: 'Ingresa el nombre del basketball-team: '},
                     {type: 'input', name: 'numeroPartidosJugados', message: 'Ingresa el numero de partido jugados: '},
-                    {type: "input", name: "fechaCreacion", message: 'Ingresa la fecha de creacion del equipo: '},
-                    {type: "input", name: 'profesional', message: 'Es un equipo profesional Si o No: '},
+                    {type: "input", name: "fechaCreacion", message: 'Ingresa la fecha de creacion del basketball-team: '},
+                    {type: "input", name: 'profesional', message: 'Es un basketball-team profesional Si o No: '},
                 ]).then(datos => {
                     return new Promise(resolve => (
                         equipoBasket.nombre = datos.nombre,
@@ -46,10 +46,10 @@ export class EquipoBasket {
 
         try {
             await inquirer.prompt([
-                {type: 'input', name: 'nombre', message: 'Ingresa el nombre del equipo: '},
+                {type: 'input', name: 'nombre', message: 'Ingresa el nombre del basketball-team: '},
                 {type: 'input', name: 'numeroPartidosJugados', message: 'Ingresa el numero de partido jugados: '},
-                {type: "input", name: "fechaCreacion", message: 'Ingresa la fecha de creacion del equipo: '},
-                {type: "input", name: 'profesional', message: 'Es un equipo profesional Si o No: '},
+                {type: "input", name: "fechaCreacion", message: 'Ingresa la fecha de creacion del basketball-team: '},
+                {type: "input", name: 'profesional', message: 'Es un basketball-team profesional Si o No: '},
             ]).then(datos => {
                 return new Promise(resolve => (
                     equipoBasketEditado.nombre = datos.nombre,
@@ -84,8 +84,8 @@ export class EquipoBasket {
                 .prompt([
                     {
                         type: 'rawlist',
-                        name: 'equipo',
-                        message: 'Que equipo desea eliminar: ',
+                        name: 'basketball-team',
+                        message: 'Que basketball-team desea eliminar: ',
                         choices: nombresEquipos
                     }
                 ]).then()

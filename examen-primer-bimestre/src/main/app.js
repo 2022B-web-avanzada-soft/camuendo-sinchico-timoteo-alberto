@@ -50,7 +50,7 @@ async function menu() {
                     numJugadores = await inquirer.prompt([{
                         type: 'input',
                         name: 'num',
-                        message: 'Cunatos jugadores tiene el equipo: '
+                        message: 'Cunatos jugadores tiene el basketball-team: '
                     }]).then()
                     while (numJugadores.num > 0) {
                         console.log('Ingrese la informacion del Jugador No. ' + numJugadores.num)
@@ -88,7 +88,7 @@ async function menu() {
                             {
                                 type: 'rawlist',
                                 name: 'equipo',
-                                message: 'Que equipo desea editar: ',
+                                message: 'Que basketball-team desea editar: ',
                                 choices: nombresEquipos
                             }
                         ]).then()
@@ -102,10 +102,10 @@ async function menu() {
                     type: "rawlist",
                     name: "opcion",
                     message: "Que deseas editar",
-                    choices: ['Editar el equipo', 'Editar un jugador', 'Agregar un jugador', 'Eliminar un jugador']
+                    choices: ['Editar el basketball-team', 'Editar un jugador', 'Agregar un jugador', 'Eliminar un jugador']
                 }]).then()
 
-                if (respuesta.opcion === 'Editar el equipo') {
+                if (respuesta.opcion === 'Editar el basketball-team') {
                     let equipo;
                     const jugadores = [];
                     await fileManager.leer(path).then(
