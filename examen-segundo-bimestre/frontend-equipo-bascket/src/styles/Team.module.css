@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'All Star Resort';
+    src:  url('../fonts/All Star Resort.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'All Ages DEMO';
+    src:  url('../fonts/AllAgesDEMO.ttf') format('truetype');
+}
+
+
+.team {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.smallCardPlayer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    color: #fd5c36;
+    font-family: "All Ages DEMO";
+}
+
+.teamName{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fd5c36;
+    font-family: "All Ages DEMO";
+}
+
+.link{
+    background: #fd5c36;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px 400px 20px 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 30px;
+    }
+
+
+}
+
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.formProfessional{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buttonSubmit{
+    background: #fd5c36;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.image{
+    border-radius: 5px;
+}
+
+.titleEdit{
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    color: #fd5c36;
+    font-family: "All Ages DEMO";
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.button{
+    background: #fd5c36;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+    font-family: "All Ages DEMO";
+}

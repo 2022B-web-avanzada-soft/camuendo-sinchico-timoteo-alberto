@@ -1,0 +1,38 @@
+.player {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    color: #fd5c36;
+    font-family: "All Ages DEMO";
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+    font-family: "All Ages DEMO";
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.button{
+    background: #fd5c36;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}

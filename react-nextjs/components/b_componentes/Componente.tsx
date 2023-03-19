@@ -6,7 +6,7 @@ type PropiedadesComponente = {
     iteraciones: number;
     mostrar?: boolean;
 };
-// interface PropiedadesComponente{
+// interfaces PropiedadesComponente{
 //
 // }
 export default function (props: PropiedadesComponente){

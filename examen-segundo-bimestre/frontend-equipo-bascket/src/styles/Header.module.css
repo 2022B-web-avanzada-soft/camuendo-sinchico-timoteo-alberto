@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'All Star Resort';
+    src:  url('../fonts/All Star Resort.ttf') format('truetype');
+}
+
+.headerLayout{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 20px;
+    gap: 40px;
+    box-shadow: #696969 0px 0px 10px;
+}
+
+
+.headerLayout img{
+    width: 70px
+}
+
+
+.links{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.link {
+    color: #ffffff;
+    background: #D14E2E;
+    text-decoration: none;
+    transition: color 200ms;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-family: 'All Star Resort';
+    letter-spacing: 2px;
+}
+
